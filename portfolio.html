@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Pandey | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            background: #1e1e2f;
+            color: white;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            background: url('https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            position: relative;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #f1f1f1;
+        }
+        .btn {
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            background: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+        .btn:hover {
+            background: #e65c00;
+        }
+        .projects {
+            padding: 50px;
+            text-align: center;
+            background: #29293d;
+            border-radius: 10px;
+            max-width: 900px;
+            margin: 50px auto;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .projects h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ff6600;
+        }
+        .project-item {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .project-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .project-item a {
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .github {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+        }
+        .github a {
+            color: #ff6600;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Harsh Pandey</h1>
+            <p>CSE B.Tech Student | BBDNITM Lucknow</p>
+            <button class="btn" onclick="scrollToProjects()">My Projects</button>
+        </div>
+    </div>
+
+    <div class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project-item"><strong>Stopwatch</strong> - <a href="https://github.com/Harsh-wiz" target="_blank">View on GitHub</a></div>
+        <div class="project-item"><strong>Tic-Tac-Toe</strong> - <a href="https://github.com/Harsh-wiz" target="_blank">View on GitHub</a></div>
+        <div class="project-item"><strong>Landing Page</strong> - <a href="https://github.com/Harsh-wiz" target="_blank">View on GitHub</a></div>
+        <div class="project-item"><strong>Weather App</strong> - <a href="https://github.com/Harsh-wiz" target="_blank">View on GitHub</a></div>
+    </div>
+
+    <div class="github">
+        <p>More projects on my GitHub:</p>
+        <a href="https://github.com/Harsh-wiz" target="_blank">GitHub Profile</a>
+    </div>
+
+    <script>
+        function scrollToProjects() {
+            document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+
+</body>
+</html>
